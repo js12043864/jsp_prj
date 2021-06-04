@@ -1,1 +1,1 @@
-# jsp_prj
+The collection of JSP projects

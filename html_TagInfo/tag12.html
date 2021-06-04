@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .start {
+            width: 200px;
+            background-color: gray;
+            text-align: center;
+        }
+
+        .one {
+            width: 150px;
+        }
+
+        .one2 {
+            width: 250px;
+        }
+
+        .two {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="start">형식</td>
+            <td class="start">구성</td>
+            <td class="start">내용</td>
+        </tr>
+        <tr>
+            <td class="one" rowspan="2">&lt;A&gt;</td>
+            <td class="one2">&lt;A HREF="..."&gt;...&lt;/A&gt;</td>
+            <td class="two">다른 홈페이지와 연결시켜 줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;A NAME="..."&gt;...&lt;/A&gt;</td>
+            <td class="two">자신의 홈페이지 내에서 연결해 줍니다.</td>
+        </tr>
+    </table>
+</body>
+
+</html>

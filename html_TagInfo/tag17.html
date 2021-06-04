@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .start {
+            width: 200px;
+            background-color: gray;
+            text-align: center;
+        }
+
+        .one {
+            width: 100px;
+        }
+
+        .one2 {
+            width: 300px;
+        }
+
+        .two {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="start">형식</td>
+            <td class="start">구성</td>
+            <td class="start">내용</td>
+        </tr>
+        <tr>
+            <td class="one" rowspan="2">&lt;FORM&gt;</td>
+            <td class="one2">&lt;FORM&gt;...&lt;/FORM&gt;</td>
+            <td class="two">양식을 정의합니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;FORM METHOD="..." ACTION="..."&gt;</td>
+            <td class="two">양식의 방법을 정의합니다.</td>
+        </tr>
+        <tr>
+            <td class="one">&lt;TEXTAREA&gt;</td>
+            <td class="one2">&lt;TEXTAREA NAME="..." ROWS="..."&gt;</td>
+            <td class="two">글틀 상자를 정의합니다.</td>
+        </tr>
+        <tr>
+            <td class="one" rowspan="5">&lt;INPUT&gt;</td>
+            <td class="one2">&lt;INPUT TYPE="..."&gt;</td>
+            <td class="two">어떤 형태로 입력할 것인지를 정의합니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;INPUT TYPE="RADIO"&gt;</td>
+            <td class="two">라디오 단추를 만들어줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;INPUT TYPE="CHECKBOX"&gt;</td>
+            <td class="two">체크 상자를 만들어 줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;INPUT TYPE="SUBMIT"&gt;</td>
+            <td class="two">제출 버튼을 만들어 줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;INPUT TYPE="RESET"&gt;</td>
+            <td class="two">취소 버튼을 만들어 줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one">&lt;SELECT&gt;</td>
+            <td class="one2">&lt;SELECT NAME="..."&gt;</td>
+            <td class="two">선택 사항 상자를 만들어 줍니다.</td>
+        </tr>
+    </table>
+</body>
+
+</html>

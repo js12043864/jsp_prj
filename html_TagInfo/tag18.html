@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .start {
+            width: 200px;
+            background-color: gray;
+            text-align: center;
+        }
+
+        .one {
+            width: 100px;
+        }
+
+        .one2 {
+            width: 250px;
+        }
+
+        .two {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="start">형식</td>
+            <td class="start">구성</td>
+            <td class="start">내용</td>
+        </tr>
+        <tr>
+            <td class="one" rowspan="6">&lt;FRAMESET&gt;</td>
+            <td class="one2">&lt;FRAMESET ROW="숫자 혹은%"&gt;</td>
+            <td class="two">창의 기본 틀을 지정합니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;FRAMESET COLS="숫자 혹은%"&gt;</td>
+            <td class="two">좌우로 나눠줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;FRAMESET SRC="..."MARGINWIDTH="..."&gt;</td>
+            <td class="two">창에 들어갈 좌우 여백을 정의합니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;FRAMESET SRC="..."MARGINHEIGHT="..."&gt;</td>
+            <td class="two">창에 들어갈 상하 여백을 정의합니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;FRAMESET SCROLLING="..."&gt;</td>
+            <td class="two">스크롤바를 설정해 줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;NOFRAMES&gt;...&lt;/NOFRAMES&gt;</td>
+            <td class="two">프레임이 안보이게 해줍니다.</td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

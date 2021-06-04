@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .start {
+            width: 200px;
+            background-color: gray;
+            text-align: center;
+        }
+
+        .one {
+            width: 100px;
+        }
+
+        .one2 {
+            width: 300px;
+        }
+
+        .two {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="start">형식</td>
+            <td class="start">구성</td>
+            <td class="start">내용</td>
+        </tr>
+        <tr>
+            <td class="one" rowspan="7">&lt;IMG SRC&gt;</td>
+            <td class="one2">&lt;IMG SRC="..."&gt;</td>
+            <td class="two">이미지를 정의해 줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;IMG SRC="..."ALIGN"..."&gt;</td>
+            <td class="two">이미지의 정렬 상태를 나타내 줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;IMG SRC="..."WIDTH"..."HEIGHT="..."&gt;</td>
+            <td class="two">이미지의 크기를 조절해 줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;IMG SRC="..."LOWSRC"..."&gt;</td>
+            <td class="two">이미지를 JPEG파일로 나타내 줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;IMG SRC="..."VSPACE=HSPACE=&gt;</td>
+            <td class="two">이미지의 여백을 조절해 줍니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;IMG SRC="..."BORDER"..."&gt;</td>
+            <td class="two">이미지의 태두리선을 조절합니다.</td>
+        </tr>
+        <tr>
+            <td class="one2">&lt;IMG SRC="..."ALT"..."&gt;</td>
+            <td class="two">이미지가 전송되지 않았을 경우에 글자로 대처해 줍니다.</td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .start {
+            width: 200px;
+            background-color: gray;
+            text-align: center;
+        }
+
+        .one {
+            width: 150px;
+        }
+
+        .one2 {
+            width: 250px;
+        }
+
+        .two {
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="start">형식</td>
+            <td class="start">구성</td>
+            <td class="start">내용</td>
+        </tr>
+        <tr>
+            <td class="one" rowspan="5">&lt;LI&gt;</td>
+            <td class="one">&lt;UL&gt;...&lt;/UL&gt;</td>
+            <td class="two">순서가 없는 목록으로 일반적인 나열을 말합니다.</td>
+        </tr>
+        <tr>
+            <td class="one">&lt;OL&gt;...&lt;/OL&gt;</td>
+            <td class="two">순서가 있는 목록으로 위에서부터 번호를 매깁니다.</td>
+        </tr>
+        <tr>
+            <td class="one">&lt;MENU&gt;...&lt;/MENU&gt;</td>
+            <td class="two">메뉴 목록으로 그리길지 않은 문장의 열거에 사용합니다.</td>
+        </tr>
+        <tr>
+            <td class="one">&lt;DIR&gt;...&lt;/DIR&gt;</td>
+            <td class="two">디렉토리 목록으로 메뉴 목록보다 짧은 문장을 나열합니다.</td>
+        </tr>
+        <tr>
+            <td class="one">&lt;DL&gt;...&lt;/DL&gt;</td>
+            <td class="two">정의 목록 태그입니다. &lt;LI&gt;가 아닌 &lt;DL&gt;와
+                &lt;DD&gt;를 사용합니다.</td>
+        </tr>
+    </table>
+</body>
+
+</html>

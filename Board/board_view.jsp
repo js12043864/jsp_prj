@@ -11,32 +11,60 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Document</title>
 		<style>
+			#navigation {
+				margin-left: 600px; 
+			}
+		
 			table,td {
-				border: 1px solid black;
-				width: 600px;
-				margin-left: auto; 
-				margin-right: auto;
+				border: 2px solid #3C8DAD;
 				border-collapse: collapse;
+				width: 650px;
+				margin-left: 600px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+
+			.update, .list {
+				margin-top: 10px;
+				min-width: 140px;
+				padding: 0 30px;
+				color: #fff;
+				font-size: 16px;
+				font-family: "맑은 고딕", Malgun Gothic, sans-serif;
+				font-weight: bold;
+				line-height: 40px;
+				border: 1px solid transparent;
+				background-color: #125D98;
 			}
 			
-			.first {
+			.option {
+				text-align: center;
+				font-size: 16px;
+				font-family: "맑은 고딕", Malgun Gothic, sans-serif;
+				font-weight: bold;
 				width: 200px;
 			}
 			
-			.list {
-				position: absolute;
-				margin-top: 10px;
-				left: 1170px;
+			.content {
+				padding-left: 10px;
+				padding-right: 10px;
+				font-size: 16px;
+				font-family: "맑은 고딕", Malgun Gothic, sans-serif;
+				width: 400px;
 			}
 			
-			.write {
-				position: absolute;
-				margin-top: 10px;
-				left: 1216px;
+			#navi:link {
+				text-decoration: none;
+				color : black;
+			}
+			#navi:visited {
+				text-decoration: none;
+				color : black;
 			}
 		</style>
 	</head>
 	<body>
+		<div id="navigation"><a href="boardtable.jsp" id="navi"><h1>게시판</h1></a></div>
 		<%
 		String id = request.getParameter("id");
 		Class.forName("com.mysql.jdbc.Driver");	
@@ -51,28 +79,32 @@
 			date = rset.getString(3);
 			content = rset.getString(4);
 		}
+		content = content.replaceAll("\n","<br>");
 		%>
 		<form method="get">
 			<table>
 				<tr>
-					<td class="first">번호</td>
-					<td><%= id%></td>
+					<td class="option">번호</td>
+					<td class="content"><%= id%></td>
 				</tr>
 				<tr>
-					<td class="first">제목</td>
-					<td><%= title%></td>
+					<td class="option">제목</td>
+					<td class="content"><%= title%></td>
 				</tr>
 				<tr>
-					<td class="first">일자</td>
-					<td><%= date%></td>
+					<td class="option">일자</td>
+					<td class="content"><%= date%></td>
 				</tr>
 				<tr>
-					<td class="first">내용</td>
-					<td><%= content%></td>
+					<td class="option">내용</td>
+					<td class="content"><%= content%></td>
 				</tr>
 			</table>
+			<div>
+			<div style="width: 960px; display: inline-block;"></div>
 			<input type="button" class="list" onclick="location.href='boardtable.jsp'" value="목록">
-			<input type="button" class="write" onclick="location.href='board_update.jsp?id=<%= id%>'" value="수정">
+			<input type="button" class="update" onclick="location.href='board_update.jsp?id=<%= id%>'" value="수정">
+			</div>
 		</form>
 	</body>
 </html>

@@ -16,8 +16,7 @@
 		Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.23.16:3306/kopoctc", "root", "kopoctc");
 		Statement stmt = conn.createStatement();
 		stmt.execute("delete from board where id=" + id + ";");
-		%>
-		
+		%>	
 		<script>
 		window.addEventListener('DOMContentLoaded', function() {
 			location.href = 'boardtable.jsp';

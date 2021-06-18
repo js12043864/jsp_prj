@@ -17,7 +17,7 @@
 		Class.forName("com.mysql.jdbc.Driver");	
 		Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.23.16:3306/kopoctc", "root", "kopoctc");
 		Statement stmt = conn.createStatement();
-		stmt.execute("update board Set title = \"" + title + "\",content = \"" + content + "\" where id = " + id + ";");
+		stmt.execute("update board Set title = \"" + title + "\",content = \"" + content + "\", date= now() where id = " + id + ";");
 		%>
 		
 		<script>

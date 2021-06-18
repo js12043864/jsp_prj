@@ -14,6 +14,7 @@
 		String ttl = request.getParameter("title");
 		String day = request.getParameter("date");
 		String cnt = request.getParameter("content");
+		
 		Class.forName("com.mysql.jdbc.Driver");	
 		Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.23.16:3306/kopoctc", "root", "kopoctc");
 		Statement stmt = conn.createStatement();

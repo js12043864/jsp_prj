@@ -105,7 +105,7 @@
 			Class.forName("com.mysql.jdbc.Driver");	
 			Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.23.16:3306/kopoctc", "root", "kopoctc");
 			Statement stmt = conn.createStatement();
-			ResultSet rset = stmt.executeQuery("select * from board order by id desc;");
+			ResultSet rset = stmt.executeQuery("select * from board2 order by id desc;");
 			while(rset.next()){
 				out.print("<tr>" +
 								"<td class=num>" +

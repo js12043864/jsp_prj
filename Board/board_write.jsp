@@ -18,8 +18,8 @@
 		Class.forName("com.mysql.jdbc.Driver");	
 		Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.23.16:3306/kopoctc", "root", "kopoctc");
 		Statement stmt = conn.createStatement();
-		stmt.execute("insert into board (title,date,content) values(\"" + ttl + "\", now(),\"" + cnt +"\");");
-		ResultSet rset = stmt.executeQuery("select * from board order by id;");
+		stmt.execute("insert into board2 (title,date,content) values(\"" + ttl + "\", now(),\"" + cnt +"\");");
+		ResultSet rset = stmt.executeQuery("select * from board2 order by id;");
 		String id ="";
 		while(rset.next()){
 			id = rset.getString(1);

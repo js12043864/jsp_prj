@@ -11,18 +11,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Document</title>
 		<%
-		String id = request.getParameter("id");
-		String title = request.getParameter("title");
-		String content = request.getParameter("content");
+		String comment = request.getParameter("comment");
+		int boardNum = Integer.parseInt(request.getParameter("boardNum"));
 		Class.forName("com.mysql.jdbc.Driver");	
 		Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.23.16:3306/kopoctc", "root", "kopoctc");
 		Statement stmt = conn.createStatement();
-		stmt.execute("update board2 Set title = \"" + title + "\",content = \"" + content + "\", date= now() where id = " + id + ";");
+		ResultSet rset = stmt.executeQuery("select * from comment2 where boardNum = " + boardNum + " order by id;");
+		int id = 0;
+		while(rset.next()){
+				id = rset.getInt(1);
+		}
+		stmt.execute("insert into comment2 (id,content,date,boardNum) values(" + (id+1) + ", \"" + comment + "\", now(), " + boardNum +");");
+		rset.close();
+		stmt.close();
+		conn.close();
 		%>
-		
 		<script>
 		window.addEventListener('DOMContentLoaded', function() {
-			location.href = 'board_view.jsp?id=<%= id%>';
+			location.href = 'board_view.jsp?id=<%= boardNum%>';
 		});
 		</script>
 	</head>

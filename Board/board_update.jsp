@@ -94,7 +94,7 @@
 		Class.forName("com.mysql.jdbc.Driver");	
 		Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.23.16:3306/kopoctc", "root", "kopoctc");
 		Statement stmt = conn.createStatement();
-		ResultSet rset = stmt.executeQuery("select * from board where id=" + id + ";");
+		ResultSet rset = stmt.executeQuery("select * from board2 where id=" + id + ";");
 		String title = "";
 		String content = "";
 		while(rset.next()){
@@ -124,7 +124,7 @@
 			<div>
 			<div style="width: 813px; display: inline-block;"></div>
 			<input type="button" class="cancel" onclick="location.href='boardtable.jsp'" value="취소">
-			<input type="submit" class="write" value="쓰기">
+			<input type="submit" class="write" value="저장">
 			<input type="button" class="delete" onclick="location.href='board_delete.jsp?id=<%= id%>'" value="삭제">
 			</div>
 		</form>

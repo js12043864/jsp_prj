@@ -12,61 +12,31 @@
 		<title>Document</title>
 		<style>
 			#box {
-				border: 1px solid green;
+				border: 3px solid green;
 				border-collapse: collapse;
 				width: 600px;
-				margin-left: auto;
+				margin-left: auto; 
 				margin-right: auto;
+				padding-bottom: 2px;
 			}
 
 			.menu {
-				border: 1px solid blue;
+				border: 2px solid blue;
 				border-collapse: collapse;
 				text-align: center;
 				background-color: white;
+				padding: 5px;
+				margin-top : 5px;
+				margin-bottom : 5px;
+				font-size: 15px;
+			}
+
+			#menu1 {
+				margin-left: 5px;
 			}
 
 			#menu2 {
 				background-color: yellow;
-			}
-			
-			td {
-				width: 40%;
-				border: 1px solid black;
-				border-collapse: collapse;
-				padding-top: 4px;
-				padding-bottom: 4px;
-			}
-			
-			.delete {
-				margin-left: 220px;
-				border: 1px solid black;
-			}
-			
-			a {
-				text-decoration:none;
-				background-color: cornsilk;
-			}
-			
-			a:link {
-				color : black;
-			}
-			
-			a:visited {
-				color : black;
-			}
-			
-			.add_name {
-				width: 100px;
-				border: 1px solid green;
-			}
-			
-			.add {
-				margin-left: 150px;
-			}
-			
-			form {
-				display: inline;
 			}
 		</style>
 		<%
@@ -83,7 +53,6 @@
 		Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.23.16:3306/kopoctc", "root", "kopoctc");
 		Statement stmt = conn.createStatement();
 		stmt.execute("insert into tupyo_table (id, age) values(" + vote_num + "," + vote_age + ");");
-		int num = 0;	
 		%>
 		<div id="box">
 			<span>
@@ -98,7 +67,7 @@
 			<br>
 			<table>
 			<% 
-			out.println("투표 결과 : 투표하였습니다.");
+			out.println("<div>&nbsp;투표 결과 : 투표하였습니다.</div>");
 			stmt.close();
 			conn.close();
 			}catch(NullPointerException e) {

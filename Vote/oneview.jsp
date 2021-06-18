@@ -12,23 +12,33 @@
 		<title>Document</title>
 		<style>
 			#box {
-				border: 1px solid green;
+				border: 3px solid green;
 				border-collapse: collapse;
 				width: 600px;
-				margin-left: auto;
+				margin-left: auto; 
 				margin-right: auto;
+				padding-bottom: 2px;
 			}
 
 			.menu {
-				border: 1px solid blue;
+				border: 2px solid blue;
 				border-collapse: collapse;
 				text-align: center;
 				background-color: white;
+				padding: 5px;
+				margin-top : 5px;
+				margin-bottom : 5px;
+				font-size: 15px;
+			}
+			
+			#menu1 {
+				margin-left: 5px;
 			}
 
 			#menu3 {
 				background-color: yellow;
 			}
+
 			
 			td {
 				border: 1px solid black;
@@ -78,7 +88,7 @@
 				<input type="button" id="menu3" class="menu" value="개표결과" onClick="location.href='resultVote.jsp'">
 			</span>
 			<br>
-			<%=num%>. <%=name%> 후보 득표성향 분석
+			<div> &nbsp;<b><%=num%>. <%=name%></b> 후보 득표성향 분석</div>
 			<table>
 			<% 
 			int age_num = 10;

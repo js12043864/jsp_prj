@@ -12,42 +12,29 @@
 		<title>Document</title>
 		<style>
 			#box {
-				border: 1px solid green;
+				border: 3px solid green;
 				border-collapse: collapse;
 				width: 600px;
-				margin-left: auto;
+				margin-left: auto; 
 				margin-right: auto;
+				padding-bottom: 2px;
 			}
-			
-			td {
-				width: 40%;
-				border: 1px solid black;
-				border-collapse: collapse;
-				padding-top: 4px;
-				padding-bottom: 4px;
-			}
+
 			.menu {
-				border: 1px solid blue;
+				border: 2px solid blue;
 				border-collapse: collapse;
 				text-align: center;
 				background-color: white;
+				padding: 5px;
+				margin-top : 5px;
+				margin-bottom : 5px;
+				font-size: 15px;
 			}
 
 			#menu1 {
+				margin-left: 5px;
 				background-color: yellow;
-			}
-
-			.delete {
-				margin-left: 100px;
-			}
-			
-			.add_name {
-				width: 50px;
-				border: 1px solid green;
-			}
-			
-			.add {
-				margin-left: 90px;
+			}		
 		</style>
 		<%
 			String del_id = request.getParameter("num");
@@ -74,7 +61,7 @@
 			<br>	
 			<table>
 			<% 
-				out.println("후보등록 결과 : 후보가 삭제 되었습니다.");	
+				out.println("<div>&nbsp;후보등록 결과 : 후보가 삭제 되었습니다.</div>");	
 				stmt.close();
 				conn.close();
 			%>

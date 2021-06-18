@@ -12,30 +12,39 @@
 		<title>Document</title>
 		<style>
 			#box {
-				border: 1px solid green;
+				border: 3px solid green;
 				border-collapse: collapse;
 				width: 600px;
 				margin-left: auto; 
 				margin-right: auto;
+				padding-bottom: 2px;
 			}
 
 			.menu {
-				border: 1px solid blue;
+				border: 2px solid blue;
 				border-collapse: collapse;
 				text-align: center;
 				background-color: white;
+				padding: 5px;
+				margin-top : 5px;
+				margin-bottom : 5px;
+				font-size: 15px;
 			}
 
 			#menu1 {
+				margin-left: 5px;
 				background-color: yellow;
 			}
 			
 			.hubo_people {
-				width: 600px;
+				width: 590px;
+				height : 30px;
 				border: 1px solid black;
 				border-collapse: collapse;
 				padding-top: 4px;
 				padding-bottom: 4px;
+				margin-left: 5px;
+				margin-right: 5px;
 			}
 			
 			.delete {
@@ -45,8 +54,14 @@
 			}
 			
 			a {
-				text-decoration:none;
+				text-decoration:none;			
+				padding: 3px 5px 3px 5px;
+				margin-left: 150px;
+				margin-bottom: 12px;
 				background-color: cornsilk;
+				border: 1px solid black;
+				border-radius: 5px;
+				font-size: 15px;
 			}
 			
 			a:link {
@@ -58,12 +73,20 @@
 			}
 			
 			.add_name {
-				width: 100px;
+				width: 132px;
+				height: 20px;
 				border: 1px solid green;
+				border-radius: 5px;
+				
 			}
 			
 			.add {
-				margin-left: 150px;
+				padding: 3px 5px 3px 5px;
+				margin-left: 140px;
+				background-color: cornsilk;
+				border: 1px solid black;
+				border-radius: 5px;
+				font-size: 15px;
 			}
 			
 			form {
@@ -115,15 +138,14 @@
 			<table>
 		<% 
 		while(rset.next()) {
-			out.println("<tr><td class=hubo_people><span>&nbsp;기호번호 : " + rset.getString(1) + " &nbsp;&nbsp;후보명: " + rset.getString(2)
-			+ "</span><a href=/Vote/deletehubo.jsp?num=" + rset.getString(1) + " class=\"delete\">삭제</a></td></tr><"); 
+			out.println("<tr><td class=hubo_people><div style=\"width: 300px; display: inline-block;\">&nbsp;기호번호 : " + rset.getString(1) + " &nbsp;&nbsp;후보명: " + rset.getString(2)
+			+ "</div><a href=/Vote/deletehubo.jsp?num=" + rset.getString(1) + " class=\"delete\">삭제</a></td></tr>"); 
 			num = rset.getInt(1);
 		}	
 		out.println("<tr>" + 
-						"<td class=hubo_people>&nbsp;기호번호 : " + (num+1) + " &nbsp;&nbsp;후보명: " + 
-							"<span>" + 
+						"<td class=hubo_people><div style=\"width: 400px; display: inline-block;\">&nbsp;기호번호 : " + (num+1) + " &nbsp;&nbsp;후보명: " + 
 								"<form action=\"inserthubo.jsp\" method=\"get\">" + 
-									"<input type=\"text\" name=\"new\" class=\"add_name\" maxlength=\"20\">" + 
+									"<input type=\"text\" name=\"new\" class=\"add_name\" maxlength=\"20\"></div>" + 
 									"<input type=\"submit\" class=\"add\" value=\"추가\">" + 
 								"</form>" +
 						"</td>" + 

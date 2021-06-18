@@ -4,4 +4,4 @@ The collection of JSP projects
 2. Program that can vote (Vote : Voting system)
 3. Html for finding free wifi place (Wifi)
 4. Report card program for students (Grade_Pg)
-5. Board page that can notice something (Board)
+5. Board page that can notice something (Board) - plan to add comment function
